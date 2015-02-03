@@ -151,12 +151,6 @@ error).
 extern NSString * const SPTCodeStandardErrorDomain;
 ```
 
-* You can use the `SPTNSStringConstant` (defined in "SPTTypeUtils.h") for your constant `NSString`s.
-
-```objc
-extern SPTNSStringConstant SPTCodeStandardDidPassLintingNotification;
-```
-
 Return Early
 ------------
 * Return early on errors and failed pre-conditions to avoid unnecessary nested brackets and / or unnecessary
