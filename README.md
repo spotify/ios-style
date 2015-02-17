@@ -134,7 +134,7 @@ stop(); // Hammer-time!
 ```
 
 * Use [doxygen](http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html)-style comments for all the headers. Make
-sure to use the available markup tags like `@param`, `@returns`, etc. The `///` form is preferred for single line
+sure to use the available markup tags like `@param`, `@return`, etc. The `///` form is preferred for single line
 comments, and `/** */` for multi-line comments. Use the same formatting as in the example block above.
 
 Pragma Marks
