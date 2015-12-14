@@ -3,8 +3,8 @@ Spotify Objective-C Coding Style
 
 Version: 0.9.0
 
-Our general coding conventions at Spotify are documented on an internal wiki, but specifics for Objective C and
-Objective C++ code in the iOS client are documented here.
+Our general coding conventions at Spotify are documented on an internal wiki, but specifics for Objective-C and
+Objective-C++ code in the iOS client are documented here.
 
 License
 -------
