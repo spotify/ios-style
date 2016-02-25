@@ -176,7 +176,7 @@ Initializers
 **Example:**
 
 ```objc
-- (id)init 
+- (instancetype)init 
 {
     self = [super init];
  
