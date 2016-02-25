@@ -171,19 +171,18 @@ computations.
 
 Initializers
 ------------
-* Always do assignment of `self`, call `super` (or the designated initializer) and return early on failure.
+* Follow [Apple's typical init format](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html#//apple_ref/doc/uid/TP40011210-CH5-SW11) to initialize objects.
 
 **Example:**
 
 ```objc
-- (instancetype)initWithName:(NSString *)name
-{
-    if (!(self = [super init])) {
-        return nil;
+- (id)init {
+    self = [super init];
+ 
+    if (self) {
+        // initialize instance variables here
     }
-
-    _name = name;
-
+ 
     return self;
 }
 ```
