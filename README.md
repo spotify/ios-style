@@ -210,8 +210,8 @@ typedef void(^SPTSomeBlock)(NSData * _Nullable data, NSError * _Nullable error);
 
 @interface SPTYourClass : NSObject
 
-@property (nonatomic, copy, readonly) NSString *customTitle;
-@property (nonatomic, strong, readonly, nullable) id<SPTPlaylist> playlist;
+@property (nonatomic, copy, readonly, nullable) NSString *customTitle;
+@property (nonatomic, strong, readonly) id<SPTPlaylist> playlist;
 
 - (nullable instancetype)initWithPlaylist:(id<SPTPlaylist>)playlist
                               customTitle:(nullable NSString *)customTitle;
