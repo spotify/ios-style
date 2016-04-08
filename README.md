@@ -23,7 +23,7 @@ Table of Contents
 6.  [Constants](#constants)
 7.  [Return Early](#return-early)
 8.  [Initializers](#initializers)
-9.  [Prefix Headers](#prefix-headers)
+9.  [Headers](#headers)
 10. [Strings](#strings)
 11. [Dot Notation](#dot-notation)
 12. [Categories](#categories)
@@ -188,9 +188,12 @@ Initializers
 }
 ```
 
-Prefix Headers
+Headers
 --------------
 * The use of prefix headers has been deprecated. Do not add new code to an existing prefix header.
+* When importing a module use the hash-import variant instead of at-import.
+  * Yes: `#import <Foundation/Foundation.h>`
+  * No: `@import Foundation;`
 
 Strings
 -------
