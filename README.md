@@ -8,7 +8,7 @@ Objective-C++ code in the iOS client are documented here.
 
 License
 -------
-Copyright (c) 2015 Spotify AB. 
+Copyright (c) 2015-2016 Spotify AB. 
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License]( http://creativecommons.org/licenses/by/4.0/).
 
@@ -23,10 +23,11 @@ Table of Contents
 6.  [Constants](#constants)
 7.  [Return Early](#return-early)
 8.  [Initializers](#initializers)
-9.  [Prefix Headers](#prefix-headers)
-10. [Strings](#strings)
-11. [Dot Notation](#dot-notation)
-12. [Categories](#categories)
+9.  [Headers](#headers)
+10. [Nullability](#nullability)
+11. [Strings](#strings)
+12. [Dot Notation](#dot-notation)
+13. [Categories](#categories)
 
 Spacing, Lines and Formatting
 -----------------------------
@@ -159,7 +160,7 @@ computations.
 **Example:**
 
 ```objc
-- (void)setFireToThe:(id)rain
+- (void)setFireToTheRain:(id)rain
 {
     if ([_rain isEqualTo:rain]) {
         return;
@@ -188,9 +189,37 @@ Initializers
 }
 ```
 
-Prefix Headers
---------------
+Headers
+-------
 * The use of prefix headers has been deprecated. Do not add new code to an existing prefix header.
+* When importing a module use the hash-import variant instead of at-import.
+  * Yes: `#import <Foundation/Foundation.h>`
+  * No: `@import Foundation;`
+
+Nullability
+-----------
+* Use `NS_ASSUME_NONNULL_BEGIN` and `NS_ASSUME_NONNULL_END` in header files, and explicitly add `nullable` when needed. Example:
+```objc
+#import <Foundation/Foundation.h>
+
+@protocol SPTPlaylist;
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^SPTSomeBlock)(NSData * _Nullable data, NSError * _Nullable error);
+
+@interface SPTYourClass : NSObject
+
+@property (nonatomic, copy, readonly, nullable) NSString *customTitle;
+@property (nonatomic, strong, readonly) id<SPTPlaylist> playlist;
+
+- (nullable instancetype)initWithPlaylist:(id<SPTPlaylist>)playlist
+                              customTitle:(nullable NSString *)customTitle;
+
+@end
+
+NS_ASSUME_NONNULL_END
+```
 
 Strings
 -------
