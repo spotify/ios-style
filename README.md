@@ -189,11 +189,36 @@ Initializers
 ```
 
 Headers
---------------
+-------
 * The use of prefix headers has been deprecated. Do not add new code to an existing prefix header.
 * When importing a module use the hash-import variant instead of at-import.
   * Yes: `#import <Foundation/Foundation.h>`
   * No: `@import Foundation;`
+
+Nullability
+-----------
+* Use `NS_ASSUME_NONNULL_BEGIN` and `NS_ASSUME_NONNULL_END` in header files, and explicitly add `nullable` when needed. Example:
+```objc
+#import <Foundation/Foundation.h>
+
+@protocol SPTPlaylist;
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^SPTSomeBlock)(NSData * _Nullable data, NSError * _Nullable error);
+
+@interface SPTYourClass : NSObject
+
+@property (nonatomic, copy, readonly) NSString *customTitle;
+@property (nonatomic, strong, readonly, nullable) id<SPTPlaylist> playlist;
+
+- (nullable instancetype)initWithPlaylist:(id<SPTPlaylist>)playlist
+                              customTitle:(nullable NSString *)customTitle;
+
+@end
+
+NS_ASSUME_NONNULL_END
+```
 
 Strings
 -------
