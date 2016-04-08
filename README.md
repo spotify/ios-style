@@ -8,7 +8,7 @@ Objective-C++ code in the iOS client are documented here.
 
 License
 -------
-Copyright (c) 2015 Spotify AB. 
+Copyright (c) 2015-2016 Spotify AB. 
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License]( http://creativecommons.org/licenses/by/4.0/).
 
