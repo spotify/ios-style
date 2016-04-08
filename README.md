@@ -24,9 +24,10 @@ Table of Contents
 7.  [Return Early](#return-early)
 8.  [Initializers](#initializers)
 9.  [Headers](#headers)
-10. [Strings](#strings)
-11. [Dot Notation](#dot-notation)
-12. [Categories](#categories)
+10. [Nullability](#nullability)
+11. [Strings](#strings)
+12. [Dot Notation](#dot-notation)
+13. [Categories](#categories)
 
 Spacing, Lines and Formatting
 -----------------------------
