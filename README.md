@@ -159,7 +159,7 @@ computations.
 **Example:**
 
 ```objc
-- (void)setFireToThe:(id)rain
+- (void)setFireToTheRain:(id)rain
 {
     if ([_rain isEqualTo:rain]) {
         return;
