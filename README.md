@@ -122,11 +122,10 @@ Comments
 **Example:**
 ```objc
 /*
- * This is a multi-line comment. The opening and closing markers are on their
- * own lines, and each other line is preceded by a * that is indented by one
- * space.
- *
- * This is a new paragraph in the same block comment.
+ This is a multi-line comment. The opening and closing markers are on their
+ own lines.
+
+ This is a new paragraph in the same block comment.
  */
 
 stop(); // Hammer-time!
@@ -134,8 +133,9 @@ stop(); // Hammer-time!
 // this is a very brief comment.
 ```
 
-* Use [doxygen](http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html)-style comments for all the headers. Make
-sure to use the available markup tags like `@param`, `@return`, etc. The `///` form is preferred for single line
+* Document all methods and properties in the headers using Xcode’s documentation style. You can select a property
+or method and use `Cmd`-`/` to see this in action. Make sure to use the available markup tags like `@param`,
+`@return`, etc. (these will be auto-generated for you by Xcode). The `///` form is preferred for single line
 comments, and `/** */` for multi-line comments. Use the same formatting as in the example block above.
 
 Pragma Marks
