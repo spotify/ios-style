@@ -134,9 +134,8 @@ stop(); // Hammer-time!
 ```
 
 * Document all methods and properties in the headers using Xcode’s documentation style. You can select a property
-or method and use `Cmd`-`/` to see this in action. Make sure to use the available markup tags like `@param`,
-`@return`, etc. (these will be auto-generated for you by Xcode). The `///` form is preferred for single line
-comments, and `/** */` for multi-line comments. Use the same formatting as in the example block above.
+or method and use `Option`+`Cmd`+`/` to see this in action. Make sure to use the available markup tags like `@param`,
+`@return`, etc. (these will be auto-generated for you by Xcode).
 
 Pragma Marks
 ------------
