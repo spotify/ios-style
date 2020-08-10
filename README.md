@@ -133,9 +133,9 @@ stop(); // Hammer-time!
 // this is a very brief comment.
 ```
 
-* Document all methods and properties in the headers using Xcode’s documentation style. You can select a property
-or method and use `Option`+`Cmd`+`/` to see this in action. Make sure to use the available markup tags like `@param`,
-`@return`, etc. (these will be auto-generated for you by Xcode).
+* Document all methods and properties in the headers using Xcode’s documentation style (which is `///` at the time of writing). 
+You can select a property or method and use `Option`+`Cmd`+`/` to generate the documentation template for it. Make sure to use the available 
+markup tags like `@param`, `@return`, etc. (these will be auto-generated for you by Xcode).
 
 Pragma Marks
 ------------
